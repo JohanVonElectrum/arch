@@ -11,7 +11,7 @@ chmod +x mirrorlist.sh
 
 # Install arch with some packages
 
-pacstrap /mnt base linux linux-firmware nano networkmanager xorg xf86-video-nouveau xf86-video-fbdev xterm qtile curl
+pacstrap /mnt base linux linux-firmware grub efibootmgr nano networkmanager xorg xf86-video-nouveau xf86-video-fbdev xterm qtile curl
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
