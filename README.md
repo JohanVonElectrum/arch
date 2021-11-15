@@ -2,14 +2,20 @@
 
 ## Instalación
 Ajustamos el layout de teclado al español.
-> loadkeys es
+```bash
+loadkeys es
+```
 
 Ubicamos el disco sobre el que queremos realizar la instalación.
-> fdisk -l
+```bash
+fdisk -l
+```
 
 ### UEFI
 
-> fdisk _**disk**_
+```bash
+fdisk disk
+```
 
 | DESCRIPTION | N   | SIZE  | TYPE |
 | ----------- | --- | ----- | ---- |
@@ -20,14 +26,14 @@ Ubicamos el disco sobre el que queremos realizar la instalación.
 
 Formateamos las particiones.
 ```bash
-mkfs.fat -F 32 **_partition1_**  
-mkfs.ext4 **_partition5_**  
-mkswap **_partition6_**  
+mkfs.fat -F 32 partition1  
+mkfs.ext4 partition5  
+mkswap partition6  
 ```
 Y luego las montamos.
 ```bash
-mount **_partition5_** /mnt  
+mount partition5 /mnt  
 mkdir /mnt/efi  
-mount **_partition1_** /mnt/efi  
-swapon **_partition6_**  
+mount partition1 /mnt/efi  
+swapon partition6  
 ```
