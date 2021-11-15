@@ -5,6 +5,8 @@ echo "es_ES.UTF-8 UTF-8" >> /etc/locale.gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 echo "KEYMAP=es" > /etc/vconsole.conf
 
+locale-gen
+
 echo "Hostname: "
 read hostname
 echo $hostname > /etc/hostname
