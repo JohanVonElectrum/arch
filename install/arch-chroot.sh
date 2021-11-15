@@ -22,3 +22,8 @@ read username
 useradd -mG wheel $username
 echo "$username password: "
 passwd $username
+
+grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=grub_efi --recheck
+grub-mkconfig -o /boot/grub/grub.cfg
+
+exit
