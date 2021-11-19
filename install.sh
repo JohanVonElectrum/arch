@@ -1,5 +1,5 @@
 # Setting up installation environment
-
+mkdir install
 mkdir /mnt/install
 cd /mnt/install
 
