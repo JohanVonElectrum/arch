@@ -1,7 +1,7 @@
 # Setting up installation environment
 
-mkdir ~/install
-cd ~/install
+mkdir /mnt/install
+cd /mnt/install
 
 # Update pacman mirrorlist
 
@@ -9,7 +9,7 @@ curl https://raw.githubusercontent.com/JohanVonElectrum/arch/master/pacman/mirro
 chmod +x mirrorlist.sh
 ./mirrorlist.sh
 
-curl https://raw.githubusercontent.com/JohanVonElectrum/arch/master/install/arch-chroot.sh -o /mnt/install/arch-chroot.sh
+curl https://raw.githubusercontent.com/JohanVonElectrum/arch/master/install/arch-chroot.sh -o arch-chroot.sh
 
 # Install arch with some packages
 
