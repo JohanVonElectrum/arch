@@ -6,4 +6,5 @@ sudo pacman -S xsettingsd picom alacritty rofi pulseaudio pavucontrol pamixer br
 cd /opt
 sudo git clone https://aur.archlinux.org/yay.git
 sudo chown -R $username:$username ./yay
-cd yaymakepkg -si
+cd yay
+makepkg -si
