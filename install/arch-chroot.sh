@@ -31,7 +31,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable NetworkManager
 systemctl enable lightdm
 
-sed -Ei "s/^# (%wheel ALL \(ALL\) ALL).*$/\1/g" /etc/sudoers
+sed -Ei "s/^# (%wheel ALL=\(ALL\) ALL).*$/\1/g" /etc/sudoers
 sed -Ei "s/^#(logind-check-graphical=).*$/\1true/g" /etc/lightdm/lightdm.conf
 sed -Ei "s/^#(greeter-session=).*$/\1lightdm-gtk-greeter/g" /etc/lightdm/lightdm.conf
 
