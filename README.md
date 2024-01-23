@@ -28,7 +28,8 @@ Formateamos las particiones.
 ```bash
 mkfs.fat -F 32 partition1  
 mkfs.ext4 partition5  
-mkswap partition6  
+mkswap partition6
+swapon partition6
 ```
 Y luego las montamos.
 ```bash
